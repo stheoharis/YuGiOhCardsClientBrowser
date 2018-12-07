@@ -16,22 +16,19 @@ import {
 
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { CardslistComponent } from './Components/cardslist/cardslist.component';
-import { SearchComponent } from './Components/search/search.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { BrowserComponent } from './Components/browser/browser.component';
 import { CardDetailComponent } from './Components/card-detail/card-detail.component';
-import { MenuComponent } from './Components/menu/menu.component';
+
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		DashboardComponent,
-		CardslistComponent,
-		SearchComponent,
+		CardslistComponent,		
 		HeaderComponent,
 		BrowserComponent,
-		CardDetailComponent,
-		MenuComponent
+		CardDetailComponent		
 	],
 	imports: [
 		BrowserModule,
@@ -41,8 +38,7 @@ import { MenuComponent } from './Components/menu/menu.component';
 		HttpClientModule,
 		ButtonsModule.forRoot(),
 		CarouselModule.forRoot(),
-		ProgressbarModule.forRoot()
-		
+		ProgressbarModule.forRoot()		
 	],
 	providers: [],
 	bootstrap: [AppComponent]

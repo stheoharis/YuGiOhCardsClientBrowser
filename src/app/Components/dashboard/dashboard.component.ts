@@ -12,7 +12,6 @@ export class DashboardComponent implements OnInit {
 	constructor() { }
 
 	ngOnInit() {
-
 		this.title = document.title;
 	}
 

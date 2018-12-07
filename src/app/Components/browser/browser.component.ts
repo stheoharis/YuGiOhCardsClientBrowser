@@ -15,8 +15,7 @@ export class BrowserComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	changeSelectedCardFromOutput($event) {
-		console.log("changeSelectedCardFromOutput");
+	changeSelectedCardFromOutput($event) {		
 		this.selectedCard = $event;
 	}
 

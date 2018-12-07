@@ -1,6 +1,4 @@
-<!--MENU-->
-{{SelectedCardMaster ? SelectedCardMaster.data.name : null}}
-
+<!--LIST MENU-->
 <div class="list-group col-sm-12" *ngFor="let card of cardsList" style="cursor:pointer" >
 	<div class="list-group-item row" (click)="selectedCardClick(card)" [class.selected]="card === selectedCard">
 

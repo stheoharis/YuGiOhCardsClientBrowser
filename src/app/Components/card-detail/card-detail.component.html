@@ -1,33 +1,32 @@
 
-
-
+<!--SELECT PROMPT-->
 <div [hidden]="selectedCardDetail" class="row col-md-12" >
-	<div class="col-sm-3">
-
-	</div>
+	<div class="col-sm-3"></div>
 	<div class="col-sm-6" style="text-align:center">
 		<br />
 		<br />
 		<br />
 		Select a card from the list!
 	</div>
-	<div class="col-sm-3">
-
-	</div>
-	
+	<div class="col-sm-3"></div>	
 </div>
 
 <div *ngIf="selectedCardDetail">
 
+	<!--NAME-->
 	<div class="row col-md-12" >
 		<h1 style="font-family:Comic Sans MS;color:cornflowerblue;">{{selectedCardDetail.data.name}}</h1>
 	</div>
-	
 
+	<!--DETAILS-->
 	<div class="row">
+
+		<!--IMAGE-->
 		<div class=" col-sm-4 animated flip">
 			<img src="http://52.57.88.137/api/card_image/{{selectedCardDetail.data.name}}" alt="second slide" style="height: auto;width: auto;max-width: 100vh;max-height: 100vh;">
 		</div>
+
+		<!--CARD ATTRIBUTES-->
 		<div class=" col-sm-8" style="font-family:Comic Sans MS;color:black;font-size:21px;">
 
 			<span class="row"style="font-size:25px;color:cornflowerblue">Details</span> 
@@ -38,17 +37,13 @@
 			<span class="row">Property: {{selectedCardDetail.data.property ? selectedCardDetail.data.property : "-"  }}</span>
 			<span class="row">Type: {{selectedCardDetail.data.type ?  selectedCardDetail.data.type : "-"}}</span>
 			<span class="row">Defense: {{selectedCardDetail.data.property ? selectedCardDetail.data.property : "-"  }}</span>
-
-
 			<br />
-
 			<span class="row" style="font-size:25px;color:cornflowerblue">Description</span> 
 			<span class="row">{{selectedCardDetail.data.text ? selectedCardDetail.data.text : null  }}</span>
 
-
 		</div>
-	</div>
 
+	</div>
 
 </div>
 

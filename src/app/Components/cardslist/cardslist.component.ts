@@ -27,8 +27,7 @@ export class CardslistComponent implements OnInit {
 			this.restService.get<Card>("http://52.57.88.137/api", "card_data", CardNamesList[index])
 				.subscribe(
 					response => {
-						this.cardsList.push(response);
-						//console.log(response);
+						this.cardsList.push(response);						
 					}
 				);
 		}
@@ -36,12 +35,9 @@ export class CardslistComponent implements OnInit {
 	}
 
 	selectedCardClick(card: Card) {
-
 		console.log(card);
 		this.selectedCard = card;
 		this.onSelectedCardChangeChild.emit(card);
-
-
 	}
 
 	getColor(cardType) {
