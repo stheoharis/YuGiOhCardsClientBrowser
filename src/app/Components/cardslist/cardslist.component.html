@@ -1,0 +1,14 @@
+<!--MENU-->
+{{SelectedCardMaster ? SelectedCardMaster.data.name : null}}
+
+<div class="list-group col-sm-12" *ngFor="let card of cardsList" style="cursor:pointer" >
+	<div class="list-group-item row" (click)="selectedCardClick(card)" [class.selected]="card === selectedCard">
+
+		{{card && card.data && card.data.name ? card.data.name  : null}}
+		<span class="row float-right" style="font-weight:600;font-family:Comic Sans MS;font-size:16px;font-style:italic;" [ngStyle]="{'color': getColor(card.data.card_type)}">
+			{{card.data.card_type | uppercase}}
+		</span>
+
+	</div>
+</div>
+
